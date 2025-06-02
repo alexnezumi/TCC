@@ -1,2 +1,0 @@
-// Create
-ocupada = false;

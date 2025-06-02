@@ -1,63 +1,34 @@
-switch (state) {
-    
-    case "spawn":
-        // Encontra cadeira livre
-        cadeira_alvo = instance_nearest(x, y, oCadeira);
-        if (cadeira_alvo != noone && !cadeira_alvo.ocupada) {
-            cadeira_alvo.ocupada = true;
-            state = "indo_cadeira";
-        }
-        break;
-    
-    case "indo_cadeira":
-        // Move até a cadeira
-        if (point_distance(x, y, cadeira_alvo.x, cadeira_alvo.y) > 2) {
-            move_towards_point(cadeira_alvo.x, cadeira_alvo.y, 1);
+switch (estado) {
+    case "chegando":
+        if (point_distance(x, y, alvo_x, alvo_y) > velocidade_cliente) {
+            move_towards_point(alvo_x, alvo_y, velocidade_cliente);
         } else {
-            x = cadeira_alvo.x;
-            y = cadeira_alvo.y;
-            state = "sentado";
+            x = alvo_x;
+            y = alvo_y;
+            speed = 0; // Para o movimento do move_towards_point
+            estado = "esperando_pedido";
         }
         break;
-    
-    case "sentado":
-        // Faz pedido
-        if (!pedido_feito) {
-            var total_itens = array_length(cardapio);
-            pedido = irandom(total_itens - 1);
-            show_debug_message("Pedido: " + string(cardapio[pedido]));
-            pedido_feito = true;
-            state = "esperando";
-        }
+
+    case "esperando_pedido":
+        // Apenas espera
         break;
-    
-    case "esperando":
-        tempo_espera--;
-        
-        if (tempo_espera <= 0) {
-            // Foi embora bravo
-            cadeira_alvo.ocupada = false;
-            feliz = false;
-            state = "indo_embora";
-        }
-        
+
+    case "recebeu_pedido":
+        // Poderia ter uma animação de feliz aqui
+        alarm [0] = 2 * game_get_speed(gamespeed_fps); // Espera 2 segundos antes de sair
+        estado = "saindo_anim"; // Estado intermediário para não disparar o alarme de novo
         break;
-    
-    case "indo_caixa":
-        var caixa = instance_nearest(x, y, oAtendimento);
-        move_towards_point(caixa.x, caixa.y, 1);
-        
-        if (point_distance(x, y, caixa.x, caixa.y) < 2) {
-            // Pagou
-            show_debug_message("Pagamento realizado!");
-            state = "indo_embora";
-        }
+
+    case "saindo_anim":
+        // Apenas esperando o alarme
         break;
-    
-    case "indo_embora":
-        // Move para fora da tela
-        move_towards_point(room_width + 50, y, 1);
-        if (x > room_width) {
+
+    case "saindo":
+        // Mover para fora da tela e destruir
+        if (y < room_height + 60) { // Supondo que saem por baixo
+            y += velocidade_cliente;
+        } else {
             instance_destroy();
         }
         break;

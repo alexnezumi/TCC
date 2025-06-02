@@ -2,7 +2,7 @@
   "$GMSprite":"",
   "%Name":"sCozinhaFake",
   "bboxMode":2,
-  "bbox_bottom":39,
+  "bbox_bottom":57,
   "bbox_left":15,
   "bbox_right":90,
   "bbox_top":33,

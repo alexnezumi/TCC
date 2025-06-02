@@ -1,21 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"oCozinhaFake",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"oPanela",
+  "eventList":[],
   "managed":true,
-  "name":"oCozinhaFake",
+  "name":"oPanela",
   "overriddenProperties":[],
   "parent":{
     "name":"Objetos",
     "path":"folders/Objetos.yy",
   },
-  "parentObjectId":{
-    "name":"oColisores",
-    "path":"objects/oColisores/oColisores.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -34,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sCozinhaFake",
-    "path":"sprites/sCozinhaFake/sCozinhaFake.yy",
+    "name":"sPanela",
+    "path":"sprites/sPanela/sPanela.yy",
   },
   "spriteMaskId":null,
   "visible":true,

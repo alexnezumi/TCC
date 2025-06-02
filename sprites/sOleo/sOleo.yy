@@ -1,10 +1,10 @@
 {
   "$GMSprite":"",
-  "%Name":"sCadeira",
-  "bboxMode":2,
-  "bbox_bottom":17,
-  "bbox_left":9,
-  "bbox_right":21,
+  "%Name":"sOleo",
+  "bboxMode":0,
+  "bbox_bottom":22,
+  "bbox_left":10,
+  "bbox_right":18,
   "bbox_top":11,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -12,16 +12,16 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"f4d4e520-971f-45d3-a48c-286d5a5d126e","name":"f4d4e520-971f-45d3-a48c-286d5a5d126e","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"deb0c99f-ffda-46dc-86db-cc85ff3d796f","name":"deb0c99f-ffda-46dc-86db-cc85ff3d796f","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
   "height":30,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"29e53712-653a-4eca-9cc7-5acdf6cca873","blendMode":0,"displayName":"default","isLocked":false,"name":"29e53712-653a-4eca-9cc7-5acdf6cca873","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"fbe69b87-7766-4ed4-85dc-46fea601a85f","blendMode":0,"displayName":"default","isLocked":false,"name":"fbe69b87-7766-4ed4-85dc-46fea601a85f","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
-  "name":"sCadeira",
+  "name":"sOleo",
   "nineSlice":null,
   "origin":4,
   "parent":{
@@ -33,7 +33,7 @@
   "resourceVersion":"2.0",
   "sequence":{
     "$GMSequence":"",
-    "%Name":"sCadeira",
+    "%Name":"sOleo",
     "autoRecord":true,
     "backdropHeight":768,
     "backdropImageOpacity":0.5,
@@ -57,7 +57,7 @@
       "resourceType":"KeyframeStore<MomentsEventKeyframe>",
       "resourceVersion":"2.0",
     },
-    "name":"sCadeira",
+    "name":"sOleo",
     "playback":1,
     "playbackSpeed":30.0,
     "playbackSpeedType":0,
@@ -69,8 +69,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"f4d4e520-971f-45d3-a48c-286d5a5d126e","path":"sprites/sCadeira/sCadeira.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"b6389e10-c2c6-4183-bfa7-0b00b97720ac","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"deb0c99f-ffda-46dc-86db-cc85ff3d796f","path":"sprites/sOleo/sOleo.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"0ecdc610-c919-4370-9c9f-e59b26fc074f","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
