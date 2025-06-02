@@ -1,0 +1,2 @@
+// Create
+ocupada = false;
