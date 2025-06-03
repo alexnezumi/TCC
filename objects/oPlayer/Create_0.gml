@@ -2,6 +2,8 @@ velh = 0;
 velv =0;
 velc = 4;
 dir = 0;
+var m_x = device_mouse_x_to_gui(0);
+var m_y = device_mouse_y_to_gui(0);
 
 velocidade = 5;
 

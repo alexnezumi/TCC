@@ -16,7 +16,7 @@ switch (estado) {
 
     case "recebeu_pedido":
         // Poderia ter uma animação de feliz aqui
-        alarm [0] = 2 * game_get_speed(gamespeed_fps); // Espera 2 segundos antes de sair
+        alarm [0] = 1 * game_get_speed(gamespeed_fps); // Espera 2 segundos antes de sair
         estado = "saindo_anim"; // Estado intermediário para não disparar o alarme de novo
         break;
 
