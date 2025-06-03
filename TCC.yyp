@@ -42,10 +42,7 @@
     {"id":{"name":"oController","path":"objects/oController/oController.yy",},},
     {"id":{"name":"oCozinhaFake","path":"objects/oCozinhaFake/oCozinhaFake.yy",},},
     {"id":{"name":"oMusicaController","path":"objects/oMusicaController/oMusicaController.yy",},},
-    {"id":{"name":"oNPCgatoBranco","path":"objects/oNPCgatoBranco/oNPCgatoBranco.yy",},},
-    {"id":{"name":"oNPCgatoFrajola","path":"objects/oNPCgatoFrajola/oNPCgatoFrajola.yy",},},
     {"id":{"name":"oNPCgatoLaranja","path":"objects/oNPCgatoLaranja/oNPCgatoLaranja.yy",},},
-    {"id":{"name":"oNPCgatoPreto","path":"objects/oNPCgatoPreto/oNPCgatoPreto.yy",},},
     {"id":{"name":"oOleo","path":"objects/oOleo/oOleo.yy",},},
     {"id":{"name":"oPanela","path":"objects/oPanela/oPanela.yy",},},
     {"id":{"name":"oParede","path":"objects/oParede/oParede.yy",},},
@@ -53,6 +50,7 @@
     {"id":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},},
     {"id":{"name":"Otelademenu","path":"objects/Otelademenu/Otelademenu.yy",},},
     {"id":{"name":"oTransicao","path":"objects/oTransicao/oTransicao.yy",},},
+    {"id":{"name":"Dia1","path":"rooms/Dia1/Dia1.yy",},},
     {"id":{"name":"Menu","path":"rooms/Menu/Menu.yy",},},
     {"id":{"name":"Tutorial","path":"rooms/Tutorial/Tutorial.yy",},},
     {"id":{"name":"scripPadaria","path":"scripts/scripPadaria/scripPadaria.yy",},},
@@ -85,6 +83,7 @@
   "RoomOrderNodes":[
     {"roomId":{"name":"Menu","path":"rooms/Menu/Menu.yy",},},
     {"roomId":{"name":"Tutorial","path":"rooms/Tutorial/Tutorial.yy",},},
+    {"roomId":{"name":"Dia1","path":"rooms/Dia1/Dia1.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

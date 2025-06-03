@@ -1,3 +1,3 @@
-estado = "saindo";
-alvo_y = room_height + 100; // Define um alvo para sair da tela (por baixo)
-// Poderia ser para um ponto de saída específico
+// oNPCgatoLaranja - Evento Alarm[0]
+estado = "saindo_efetivamente";
+show_debug_message("Cliente " + string(id) + ": Acabou tempo de reação, iniciando saída efetiva.");

@@ -16,4 +16,4 @@ global.produtos_prontos_no_balcao = ds_list_create(); // Lista de produtos no ba
 
 // ... (código das receitas) ...
 alarm[0] = 5 * game_get_speed(gamespeed_fps); // Primeiro cliente em 5 segundos
-max_clientes_na_tela = 3; // Limite de clientes
+max_clientes_na_tela = 4; // Limite de clientes
