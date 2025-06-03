@@ -19,14 +19,20 @@ for(var i = 0; i < op_max;i++){
 	draw_set_color(c_purple);
 	index = i;
 	if(mouse_check_button_pressed(mb_left)){
-	if(index == 3){
-		game_end();
-	}
-	else if(index == 0){
+	
+	if(index == 0){
 	if (!instance_exists(oTransicao))
 {
 	instance_create_layer(0,0,layer, oTransicao,{destino: Tutorial});
 }
+	}else if (index == 2){
+		if (!instance_exists(oTransicao2))
+{
+	instance_create_layer(0,0,layer, oTransicao2,{destino: Controles});
+	 
+	}
+	}else if(index == 3){
+		game_end();
 	}
 	}
 	}else{
