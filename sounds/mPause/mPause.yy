@@ -1,6 +1,6 @@
 {
   "$GMSound":"",
-  "%Name":"menu",
+  "%Name":"mPause",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -9,8 +9,8 @@
   "bitRate":128,
   "compression":1,
   "conversionMode":0,
-  "duration":102.896324,
-  "name":"menu",
+  "duration":157.88408,
+  "name":"mPause",
   "parent":{
     "name":"Sons",
     "path":"folders/Sons.yy",
@@ -19,7 +19,7 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"menu.mp3",
+  "soundFile":"mPause.mp3",
   "type":0,
   "volume":1.0,
 }

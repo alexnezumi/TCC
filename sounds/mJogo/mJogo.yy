@@ -1,6 +1,6 @@
 {
   "$GMSound":"",
-  "%Name":"jogo",
+  "%Name":"mJogo",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -10,7 +10,7 @@
   "compression":1,
   "conversionMode":0,
   "duration":98.220406,
-  "name":"jogo",
+  "name":"mJogo",
   "parent":{
     "name":"Sons",
     "path":"folders/Sons.yy",
@@ -19,7 +19,7 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"jogo.mp3",
+  "soundFile":"mJogo.mp3",
   "type":0,
   "volume":1.0,
 }
