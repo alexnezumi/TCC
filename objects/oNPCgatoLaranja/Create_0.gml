@@ -14,7 +14,6 @@ alvo_y = y;
 
 tempo_max_espera_segundos = 10;
 timer_entrega = 0;
-sprite_pedindo = sprite_index;
 sprite_feliz = sNPCgatoLaranjaFeliz; // << SUBSTITUA
 sprite_bravo = sNPCgatosBravos; // << SUBSTITUA
 

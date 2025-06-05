@@ -45,16 +45,6 @@ if (mouse_check_button_pressed(mb_left)) {
     var _interagiu_com_algo_no_mouse = false; // Flag para evitar múltiplas ações com um clique
 
     // 1. Tenta Coletar Ingredientes
-    var _inst_oleo_clicado = instance_position(_mx, _my, oOleo);
-    if (_inst_oleo_clicado != noone) {
-        // Certifique-se que 'meus_ingredientes.oleo' existe. Inicialize no Create Event do oPlayer.
-        // Ex: if (!variable_struct_exists(meus_ingredientes, "oleo")) { meus_ingredientes.oleo = 0; }
-        meus_ingredientes.oleo += 1;
-        show_debug_message("Coletou Oleo com mouse! Total: " + string(meus_ingredientes.oleo));
-        // Se oOleo é um item que desaparece: with (_inst_oleo_clicado) { instance_destroy(); }
-        _interagiu_com_algo_no_mouse = true;
-    }
-
     if (!_interagiu_com_algo_no_mouse) { // Só tenta o próximo se não interagiu com o anterior
         var _inst_panela_clicada = instance_position(_mx, _my, oPanela);
         if (_inst_panela_clicada != noone) {
@@ -64,6 +54,79 @@ if (mouse_check_button_pressed(mb_left)) {
             _interagiu_com_algo_no_mouse = true;
         }
     }
+	  if (!_interagiu_com_algo_no_mouse) { // Só tenta o próximo se não interagiu com o anterior
+        var _inst_rosquinha_clicada = instance_position(_mx, _my, oRosquinha);
+        if (_inst_rosquinha_clicada != noone) {
+            meus_ingredientes.rosquinha += 1;
+            show_debug_message("Coletou Rosquinha com mouse! Total: " + string(meus_ingredientes.rosquinha));
+            // Se oPanela é um item que desaparece: with (_inst_panela_clicada) { instance_destroy(); }
+            _interagiu_com_algo_no_mouse = true;
+        }
+	  }
+	    if (!_interagiu_com_algo_no_mouse) { // Só tenta o próximo se não interagiu com o anterior
+        var _inst_calda_ninho_clicada = instance_position(_mx, _my, oCaldaNinho);
+        if (_inst_calda_ninho_clicada != noone) {
+            meus_ingredientes.calda_ninho += 1;
+            show_debug_message("Coletou Calda ninho com mouse! Total: " + string(meus_ingredientes.calda_ninho));
+            // Se oPanela é um item que desaparece: with (_inst_panela_clicada) { instance_destroy(); }
+            _interagiu_com_algo_no_mouse = true;
+		}
+	  }
+	    if (!_interagiu_com_algo_no_mouse) { // Só tenta o próximo se não interagiu com o anterior
+        var _inst_calda_chocolate_clicada = instance_position(_mx, _my, oCaldaChocolate);
+        if (_inst_calda_chocolate_clicada != noone) {
+            meus_ingredientes.calda_chocolate += 1;
+            show_debug_message("Coletou Calda chocolate com mouse! Total: " + string(meus_ingredientes.calda_chocolate));
+            // Se oPanela é um item que desaparece: with (_inst_panela_clicada) { instance_destroy(); }
+            _interagiu_com_algo_no_mouse = true;
+		}
+	  }
+	    if (!_interagiu_com_algo_no_mouse) { // Só tenta o próximo se não interagiu com o anterior
+        var _inst_calda_morango_clicada = instance_position(_mx, _my, oCaldaMorango);
+        if (_inst_calda_morango_clicada != noone) {
+            meus_ingredientes.calda_morango += 1;
+            show_debug_message("Coletou Calda morango com mouse! Total: " + string(meus_ingredientes.calda_morango));
+            // Se oPanela é um item que desaparece: with (_inst_panela_clicada) { instance_destroy(); }
+            _interagiu_com_algo_no_mouse = true;
+		}
+	  }
+	    if (!_interagiu_com_algo_no_mouse) { // Só tenta o próximo se não interagiu com o anterior
+        var _inst_massa_clicada = instance_position(_mx, _my, oMassa);
+        if (_inst_massa_clicada != noone) {
+            meus_ingredientes.massa += 1;
+            show_debug_message("Coletou Massa com mouse! Total: " + string(meus_ingredientes.massa));
+            // Se oPanela é um item que desaparece: with (_inst_panela_clicada) { instance_destroy(); }
+            _interagiu_com_algo_no_mouse = true;
+		}
+	  }
+	   if (!_interagiu_com_algo_no_mouse) { // Só tenta o próximo se não interagiu com o anterior
+        var _inst_frango_clicada = instance_position(_mx, _my, oFrago);
+        if (_inst_frango_clicada != noone) {
+            meus_ingredientes.frango += 1;
+            show_debug_message("Coletou Frango com mouse! Total: " + string(meus_ingredientes.frango));
+            // Se oPanela é um item que desaparece: with (_inst_panela_clicada) { instance_destroy(); }
+            _interagiu_com_algo_no_mouse = true;
+		}
+	  }
+	   if (!_interagiu_com_algo_no_mouse) { // Só tenta o próximo se não interagiu com o anterior
+        var _inst_massa_clicada = instance_position(_mx, _my, oMassa);
+        if (_inst_massa_clicada != noone) {
+            meus_ingredientes.massa += 1;
+            show_debug_message("Coletou Massa com mouse! Total: " + string(meus_ingredientes.massa));
+            // Se oPanela é um item que desaparece: with (_inst_panela_clicada) { instance_destroy(); }
+            _interagiu_com_algo_no_mouse = true;
+		}
+	  }
+	   if (!_interagiu_com_algo_no_mouse) { // Só tenta o próximo se não interagiu com o anterior
+        var _inst_forma_clicada = instance_position(_mx, _my, oForma);
+        if (_inst_forma_clicada != noone) {
+            meus_ingredientes.forma += 1;
+            show_debug_message("Coletou Forma com mouse! Total: " + string(meus_ingredientes.forma));
+            // Se oPanela é um item que desaparece: with (_inst_panela_clicada) { instance_destroy(); }
+            _interagiu_com_algo_no_mouse = true;
+		}
+	  }
+	  
     // Adicione mais 'if (!_interagiu_com_algo_no_mouse) { var _inst_outro = ... }' para outros ingredientes
 
     // 2. Tenta Interagir com a Cozinha (Fogão) - Só se não pegou ingrediente e não está carregando nada

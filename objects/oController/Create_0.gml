@@ -5,9 +5,79 @@
 global.receitas = [
     {
         nome: "Coxinha",
-        ingredientes: { oleo: 1, panela: 1}, // Precisa de 2 farinhas
-        tempo_fogao: 5 * game_get_speed(gamespeed_fps)// 5 segundos (ajuste game_get_speed se usar delta time)
+        ingredientes: { massa: 1, frango: 1, panela: 1}, // itens 
+        tempo_fogao: 5 * game_get_speed(gamespeed_fps)// 5 segundos
 
+    },
+	 {
+        nome: "Donut de Ninho",
+        ingredientes: { rosquinha: 1, calda_ninho: 1}, // itens 
+        tempo_fogao: 5 * game_get_speed(gamespeed_fps)// 5 segundos
+
+    },
+	{
+        nome: "Donut de Chocolate",
+        ingredientes: { rosquinha: 1, calda_chocolate: 1}, // itens 
+        tempo_fogao: 5 * game_get_speed(gamespeed_fps)// 5 segundos
+
+    },
+	{
+        nome: "Donut de Morango",
+        ingredientes: { rosquinha: 1, calda_morango: 1}, // itens 
+        tempo_fogao: 5 * game_get_speed(gamespeed_fps)// 5 segundos
+
+    },
+	{
+        nome: "Croassant",
+        ingredientes: { massa: 1, frango: 1}, // itens 
+        tempo_fogao: 5 * game_get_speed(gamespeed_fps)// 5 segundos
+
+    },
+	{
+        nome: "Torta de Frango",
+        ingredientes: { massa: 1, forma: 1}, // itens 
+        tempo_fogao: 5 * game_get_speed(gamespeed_fps)// 5 segundos
+
+    },
+	{
+        nome: "Bolo Red Velvet",
+        ingredientes: { bolo_redvelvet:1},// itens 
+    },
+	{
+        nome: "Bolo de Cenoura",
+        ingredientes: { bolo_cenoura:1} // itens 
+    },
+	{
+        nome: "Bolo Chocolate",
+        ingredientes: { bolo_redvelvet:1} // itens 
+    },
+	{
+        nome: "Café",
+        ingredientes: { cafe: 1} // itens 
+    },
+	{
+        nome: "Chocolate Quente",
+        ingredientes: { chocolate_quente: 1} // itens 
+    },
+	{
+        nome: "Aguá",
+        ingredientes: { agua: 1} // itens 
+    },
+	{
+        nome: "Suco de Morango",
+        ingredientes: { suco_morango: 1} // itens 
+    },
+	{
+        nome: "Suco de Uva",
+        ingredientes: { suco_uva: 1} // itens 
+    },
+	{
+        nome: "Suco de Limao",
+        ingredientes: { suco_limao: 1} // itens 
+    },
+	{
+        nome: "Suco de Laranja",
+        ingredientes: { suco_laranja: 1} // itens 
     }
     // Adicione mais receitas aqui futuramente
 ];
