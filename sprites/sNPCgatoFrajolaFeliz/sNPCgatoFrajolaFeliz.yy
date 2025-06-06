@@ -1,6 +1,6 @@
 {
   "$GMSprite":"",
-  "%Name":"sNPCgatoPreto",
+  "%Name":"sNPCgatoFrajolaFeliz",
   "bboxMode":2,
   "bbox_bottom":58,
   "bbox_left":6,
@@ -12,16 +12,16 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"1a95bb06-8f1b-4920-b8b7-5eb7a5362be0","name":"1a95bb06-8f1b-4920-b8b7-5eb7a5362be0","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"faf937ae-c344-4044-b51a-d7b1bb702d40","name":"faf937ae-c344-4044-b51a-d7b1bb702d40","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
   "height":60,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"a1429fbe-c5b2-4635-b8fe-fb68cd4a980d","blendMode":0,"displayName":"default","isLocked":false,"name":"a1429fbe-c5b2-4635-b8fe-fb68cd4a980d","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"8e706d41-df59-43ac-83c0-c09efbf735d2","blendMode":0,"displayName":"default","isLocked":false,"name":"8e706d41-df59-43ac-83c0-c09efbf735d2","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
-  "name":"sNPCgatoPreto",
+  "name":"sNPCgatoFrajolaFeliz",
   "nineSlice":null,
   "origin":4,
   "parent":{
@@ -33,7 +33,7 @@
   "resourceVersion":"2.0",
   "sequence":{
     "$GMSequence":"",
-    "%Name":"sNPCgatoPreto",
+    "%Name":"sNPCgatoFrajolaFeliz",
     "autoRecord":true,
     "backdropHeight":768,
     "backdropImageOpacity":0.5,
@@ -57,7 +57,7 @@
       "resourceType":"KeyframeStore<MomentsEventKeyframe>",
       "resourceVersion":"2.0",
     },
-    "name":"sNPCgatoPreto",
+    "name":"sNPCgatoFrajolaFeliz",
     "playback":1,
     "playbackSpeed":30.0,
     "playbackSpeedType":0,
@@ -69,8 +69,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"1a95bb06-8f1b-4920-b8b7-5eb7a5362be0","path":"sprites/sNPCgatoPreto/sNPCgatoPreto.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"a18a668b-43dc-4bb2-a106-3c34f9098d5d","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"faf937ae-c344-4044-b51a-d7b1bb702d40","path":"sprites/sNPCgatoFrajolaFeliz/sNPCgatoFrajolaFeliz.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"e2248ec2-46b2-4a5a-a346-b377bd680c29","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

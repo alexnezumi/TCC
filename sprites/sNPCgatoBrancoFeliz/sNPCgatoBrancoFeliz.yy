@@ -1,8 +1,8 @@
 {
   "$GMSprite":"",
-  "%Name":"sNPCgatoPreto",
+  "%Name":"sNPCgatoBrancoFeliz",
   "bboxMode":2,
-  "bbox_bottom":58,
+  "bbox_bottom":59,
   "bbox_left":6,
   "bbox_right":39,
   "bbox_top":0,
@@ -12,16 +12,16 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"1a95bb06-8f1b-4920-b8b7-5eb7a5362be0","name":"1a95bb06-8f1b-4920-b8b7-5eb7a5362be0","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"f257da31-b6bb-4a59-b78b-120f4a310d2e","name":"f257da31-b6bb-4a59-b78b-120f4a310d2e","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
   "height":60,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"a1429fbe-c5b2-4635-b8fe-fb68cd4a980d","blendMode":0,"displayName":"default","isLocked":false,"name":"a1429fbe-c5b2-4635-b8fe-fb68cd4a980d","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"b630542b-9b3c-41d1-ab54-0fcc1a82e4f7","blendMode":0,"displayName":"default","isLocked":false,"name":"b630542b-9b3c-41d1-ab54-0fcc1a82e4f7","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
-  "name":"sNPCgatoPreto",
+  "name":"sNPCgatoBrancoFeliz",
   "nineSlice":null,
   "origin":4,
   "parent":{
@@ -33,7 +33,7 @@
   "resourceVersion":"2.0",
   "sequence":{
     "$GMSequence":"",
-    "%Name":"sNPCgatoPreto",
+    "%Name":"sNPCgatoBrancoFeliz",
     "autoRecord":true,
     "backdropHeight":768,
     "backdropImageOpacity":0.5,
@@ -57,7 +57,7 @@
       "resourceType":"KeyframeStore<MomentsEventKeyframe>",
       "resourceVersion":"2.0",
     },
-    "name":"sNPCgatoPreto",
+    "name":"sNPCgatoBrancoFeliz",
     "playback":1,
     "playbackSpeed":30.0,
     "playbackSpeedType":0,
@@ -69,8 +69,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"1a95bb06-8f1b-4920-b8b7-5eb7a5362be0","path":"sprites/sNPCgatoPreto/sNPCgatoPreto.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"a18a668b-43dc-4bb2-a106-3c34f9098d5d","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"f257da31-b6bb-4a59-b78b-120f4a310d2e","path":"sprites/sNPCgatoBrancoFeliz/sNPCgatoBrancoFeliz.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"aba48e08-8003-4b45-b804-0a39c79a40d4","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

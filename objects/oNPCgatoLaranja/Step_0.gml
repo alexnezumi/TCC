@@ -72,18 +72,21 @@ switch (estado) {
         }
         break;
 
-    case "esperando_pedido":
+       case "esperando_pedido":
         if (timer_entrega > 0) {
             timer_entrega--;
-        } else { 
-            show_debug_message("Cliente " + string(id) + ": TEMPO ESGOTADO! Ficou bravo.");
+        } else { // Tempo esgotou!
+            
+            // --- LÓGICA DE PENALIDADE "PÉSSIMO" ---
+            var pontos_perdidos = -5; // << AJUSTE o valor da penalidade se quiser
+            global.pontos = max(0, global.pontos + pontos_perdidos); // 'max(0, ...)' impede que a pontuação fique negativa
+            show_debug_message("Entrega PÉSSIMA! Tempo esgotado. " + string(pontos_perdidos) + " pontos. Total: " + string(global.pontos));
+            // ----------------------------------------
+            
+            // O resto da lógica para o cliente ficar bravo e ir embora
             estado = "saindo_bravo";
             sprite_index = sprite_bravo;
-            if (instance_exists(minha_cadeira_id) && minha_cadeira_id.id_cliente_sentado == id) {
-                minha_cadeira_id.ocupada = false;
-                minha_cadeira_id.id_cliente_sentado = noone;
-            }
-            minha_cadeira_id = noone;
+            // ... (liberar cadeira se usar esse sistema, e definir alarme para sair) ...
             alarm[0] = 2 * game_get_speed(gamespeed_fps);
         }
         break;

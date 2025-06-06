@@ -1,20 +1,30 @@
-// oNPCgatoLaranja - Evento Create
-show_debug_message("oNPCgatoLaranja (ID: " + string(id) + ") - CREATE EVENT INICIADO em x=" + string(x) + ", y=" + string(y));
+// oNPCgatoLaranja - Evento Criar
+show_debug_message("oNPCgatoLaranja (ID: " + string(id) + ") - CREATE EVENT INICIADO");
+
+// --- ESCOLHER UM TIPO DE CLIENTE ALEATORIAMENTE ---
+var _lista_tipos = global.tipos_de_cliente;
+var _num_tipos = array_length(_lista_tipos);
+
+// Escolhe um índice aleatório da lista de tipos de cliente
+var _tipo_escolhido_idx = irandom(_num_tipos - 1);
+// Pega o struct do tipo de cliente escolhido
+var _meu_tipo_de_sprite = _lista_tipos[_tipo_escolhido_idx];
+// ----------------------------------------------------
+
+
+// --- CONFIGURAR SPRITES DESTE NPC ESPECÍFICO ---
+// As variáveis de sprite agora pegam os valores do tipo que foi sorteado
+sprite_pedindo = _meu_tipo_de_sprite.pedindo;
+sprite_feliz = _meu_tipo_de_sprite.feliz;
+sprite_bravo = _meu_tipo_de_sprite.bravo;
+
+// Define o sprite inicial do NPC
+sprite_index = sprite_pedindo;
+// ------------------------------------------------
 
 meu_pedido_nome = noone;
-estado = "caminhando_reto_inicial";
-velocidade_cliente = 5;
-// oNPCgatoLaranja - Evento Criar
-
-// ... (outras variáveis que você já tem) ...
-
-// --- TIMER E SPRITES DE REAÇÃO ---
-tempo_max_espera_segundos = 10;
-timer_entrega = 0;
-sprite_pedindo = sprite_index; // << ADICIONE ESTA LINHA
-
-// << AJUSTE ESTE VALOR DE X CONFORME NECESSÁRIO >>
-x_alvo_caminhada_reta = 1100;
+estado = "buscando_cadeira"; // Ou o estado inicial que você estiver usando
+velocidade_cliente = 3;
 
 minha_cadeira_id = noone;
 alvo_x = x;
@@ -22,9 +32,9 @@ alvo_y = y;
 
 tempo_max_espera_segundos = 10;
 timer_entrega = 0;
-sprite_feliz = sNPCgatoLaranjaFeliz; // << SUBSTITUA
-sprite_bravo = sNPCgatosBravos; // << SUBSTITUA
 
+
+// --- ESCOLHER UM PEDIDO ALEATÓRIO (como tínhamos antes) ---
 if (variable_global_exists("receitas") && array_length(global.receitas) > 0) {
     var _receita_aleatoria_idx = irandom(array_length(global.receitas) - 1);
     meu_pedido_nome = global.receitas[_receita_aleatoria_idx].nome;
@@ -34,7 +44,4 @@ if (variable_global_exists("receitas") && array_length(global.receitas) > 0) {
     exit;
 }
 
-// A linha abaixo que definia image_xscale foi REMOVIDA:
-// image_xscale = -2; 
-
-show_debug_message("oNPCgatoLaranja (ID: " + string(id) + ") quer: " + meu_pedido_nome + ". Estado: " + estado + ". Alvo reto: x=" + string(x_alvo_caminhada_reta));
+show_debug_message("oNPCgatoLaranja (ID: " + string(id) + ") - CREATE EVENT CONCLUÍDO. Sprite: " + sprite_get_name(sprite_index) + ". Pedido: " + meu_pedido_nome);

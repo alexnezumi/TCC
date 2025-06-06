@@ -201,10 +201,38 @@ if (keyboard_check_pressed(ord("E"))) {
             if ((_cliente_em_colisao.estado == "esperando_pedido" || _cliente_em_colisao.estado == "sentado_pedindo") &&
                 _cliente_em_colisao.meu_pedido_nome == item_carregando) {
                 
+                // >>>>> INÍCIO DA MUDANÇA: LÓGICA DE PONTUAÇÃO POR TEMPO <<<<<
+                
+                var pontos_ganhos = 0;
+                var _tempo_restante_frames = _cliente_em_colisao.timer_entrega;
+                var _tempo_total_frames = _cliente_em_colisao.tempo_max_espera_segundos * game_get_speed(gamespeed_fps);
+                var _porcentagem_restante = 0;
+                
+                if (_tempo_total_frames > 0) {
+                    _porcentagem_restante = _tempo_restante_frames / _tempo_total_frames;
+                }
+                
+                // Define a pontuação baseada na porcentagem de tempo que sobrou
+                // << VOCÊ PODE AJUSTAR ESTES VALORES E PONTOS COMO QUISER >>
+                if (_porcentagem_restante > 0.7) { // Mais de 70% do tempo sobrou
+                    pontos_ganhos = 15;
+                    show_debug_message("Entrega ÓTIMA! +" + string(pontos_ganhos) + " pontos.");
+                }
+                else if (_porcentagem_restante > 0.3) { // Entre 30% e 70% do tempo sobrou
+                    pontos_ganhos = 10;
+                    show_debug_message("Entrega BOA. +" + string(pontos_ganhos) + " pontos.");
+                }
+                else { // Menos de 30% do tempo sobrou (mas ainda dentro do prazo)
+                    pontos_ganhos = 5;
+                    show_debug_message("Entrega RUIM... mas a tempo. +" + string(pontos_ganhos) + " pontos.");
+                }
+
+                global.pontos += pontos_ganhos;
+                
+                // >>>>> FIM DA MUDANÇA: LÓGICA DE PONTUAÇÃO POR TEMPO <<<<<
+                
+                // Continua com as ações de entrega bem-sucedida:
                 _cliente_em_colisao.estado = "recebeu_pedido";
-                var pontos_ganhos_pelo_pedido = 10;
-                global.pontos += pontos_ganhos_pelo_pedido;
-                show_debug_message("PONTUAÇÃO: + " + string(pontos_ganhos_pelo_pedido) + " pontos. Total atual: " + string(global.pontos));
                 item_carregando = noone;
             }
         }
