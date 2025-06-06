@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"oOleo",
+  "%Name":"Object35",
   "eventList":[],
   "managed":true,
-  "name":"oOleo",
+  "name":"Object35",
   "overriddenProperties":[],
   "parent":{
     "name":"Objetos",
@@ -27,13 +27,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"sOleo",
-    "path":"sprites/sOleo/sOleo.yy",
-  },
-  "spriteMaskId":{
-    "name":"sOleo",
-    "path":"sprites/sOleo/sOleo.yy",
-  },
+  "spriteId":null,
+  "spriteMaskId":null,
   "visible":true,
 }

@@ -4,6 +4,14 @@ show_debug_message("oNPCgatoLaranja (ID: " + string(id) + ") - CREATE EVENT INIC
 meu_pedido_nome = noone;
 estado = "caminhando_reto_inicial";
 velocidade_cliente = 5;
+// oNPCgatoLaranja - Evento Criar
+
+// ... (outras variáveis que você já tem) ...
+
+// --- TIMER E SPRITES DE REAÇÃO ---
+tempo_max_espera_segundos = 10;
+timer_entrega = 0;
+sprite_pedindo = sprite_index; // << ADICIONE ESTA LINHA
 
 // << AJUSTE ESTE VALOR DE X CONFORME NECESSÁRIO >>
 x_alvo_caminhada_reta = 1100;

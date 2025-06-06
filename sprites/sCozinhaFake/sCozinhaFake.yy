@@ -12,18 +12,18 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"0cb4ca5e-7b13-4ea0-9ed7-04eb22a335bf","name":"0cb4ca5e-7b13-4ea0-9ed7-04eb22a335bf","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"2ac1ae87-0127-4c45-b370-959ed746e2bc","name":"2ac1ae87-0127-4c45-b370-959ed746e2bc","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
-  "height":90,
+  "height":40,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"432fd674-804c-433d-936c-e6248b3df54e","blendMode":0,"displayName":"default","isLocked":false,"name":"432fd674-804c-433d-936c-e6248b3df54e","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"1a06f8bc-ac96-4700-9251-2506af58e093","blendMode":0,"displayName":"default","isLocked":false,"name":"1a06f8bc-ac96-4700-9251-2506af58e093","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"sCozinhaFake",
   "nineSlice":null,
-  "origin":9,
+  "origin":1,
   "parent":{
     "name":"Sprites",
     "path":"folders/Sprites.yy",
@@ -69,14 +69,14 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"0cb4ca5e-7b13-4ea0-9ed7-04eb22a335bf","path":"sprites/sCozinhaFake/sCozinhaFake.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"a6ac7f07-c7c4-4b6c-8be2-41080715fd3a","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"2ac1ae87-0127-4c45-b370-959ed746e2bc","path":"sprites/sCozinhaFake/sCozinhaFake.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"2cd4fd87-ead6-4f96-908c-e055d4f4bc72","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":40,
-    "yorigin":40,
+    "xorigin":45,
+    "yorigin":0,
   },
   "swatchColours":null,
   "swfPrecision":0.5,
