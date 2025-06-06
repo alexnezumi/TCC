@@ -27,7 +27,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"sBoloRedVelvet",
+    "path":"sprites/sBoloRedVelvet/sBoloRedVelvet.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

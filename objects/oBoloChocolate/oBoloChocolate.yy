@@ -27,7 +27,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"sBoloChocolate",
+    "path":"sprites/sBoloChocolate/sBoloChocolate.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

@@ -15,8 +15,8 @@ var velh_atual = (tecla_direita - tecla_esquerda) * velocidade;
 var velv_atual = (tecla_baixo - tecla_cima) * velocidade;
 
 // Virar sprite (se você usa)
-if (velh_atual > 0) { image_xscale = 1; }
-else if (velh_atual < 0) { image_xscale = -1; }
+if (velh_atual > 0) { image_xscale = -2; }
+else if (velh_atual < 0) { image_xscale = 2; }
 
 // --- COLISÃO ---
 if (place_meeting(x + velh_atual, y, oColisores)) {

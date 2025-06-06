@@ -27,7 +27,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"sSucoLimao",
+    "path":"sprites/sSucoLimao/sSucoLimao.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

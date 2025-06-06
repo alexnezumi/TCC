@@ -91,7 +91,7 @@ if (!variable_global_exists("receitas")) { // Garante que a lista só seja criad
 
 // ... (código das receitas) ...
 alarm[0] = 5 * game_get_speed(gamespeed_fps); // Primeiro cliente em 5 segundos
-max_clientes_na_tela = 4; // Limite de clientes
+max_clientes_na_tela = 12; // Limite de clientes
 
 
 // obj_controlador_principal - Evento Criar

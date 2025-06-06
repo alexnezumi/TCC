@@ -27,7 +27,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"sCafe",
+    "path":"sprites/sCafe/sCafe.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

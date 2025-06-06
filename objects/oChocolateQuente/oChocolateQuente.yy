@@ -27,7 +27,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"sChocolateQuente",
+    "path":"sprites/sChocolateQuente/sChocolateQuente.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

@@ -27,7 +27,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"sCaldaNinho",
+    "path":"sprites/sCaldaNinho/sCaldaNinho.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

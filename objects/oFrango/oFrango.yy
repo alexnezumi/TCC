@@ -27,7 +27,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"sFrango",
+    "path":"sprites/sFrango/sFrango.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

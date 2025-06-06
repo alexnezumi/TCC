@@ -27,7 +27,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"sCaldaChocolate",
+    "path":"sprites/sCaldaChocolate/sCaldaChocolate.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

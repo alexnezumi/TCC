@@ -28,4 +28,4 @@ if (_cadeira_disponivel) {
 }
 
 // Reagenda o alarme
-alarm[0] = random_range(8, 15) * game_get_speed(gamespeed_fps);
+alarm[0] = random_range(1,2) * game_get_speed(gamespeed_fps);

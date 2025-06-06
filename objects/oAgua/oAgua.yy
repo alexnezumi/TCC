@@ -27,7 +27,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"sAgua",
+    "path":"sprites/sAgua/sAgua.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }
