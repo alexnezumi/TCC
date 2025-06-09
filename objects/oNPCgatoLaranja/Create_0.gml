@@ -24,13 +24,13 @@ sprite_index = sprite_pedindo;
 
 meu_pedido_nome = noone;
 estado = "buscando_cadeira"; // Ou o estado inicial que você estiver usando
-velocidade_cliente = 3;
+velocidade_cliente = 5;
 
 minha_cadeira_id = noone;
 alvo_x = x;
 alvo_y = y;
 
-tempo_max_espera_segundos = 3;
+tempo_max_espera_segundos = 20;
 timer_entrega = 0;
 
 

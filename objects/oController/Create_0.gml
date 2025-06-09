@@ -147,7 +147,7 @@ if (!variable_global_exists("tipos_de_cliente")) {
 // --- CONFIGURAÇÕES DO CICLO DE DIA ---
 // Define a duração do dia em segundos (2 minutos * 60 segundos)
 if (!variable_global_exists("duracao_dia_em_segundos")) {
-    global.duracao_dia_em_segundos = 2 * 60; 
+    global.duracao_dia_em_segundos = 5 * 60; 
 }
 // Controla o número do dia atual
 if (!variable_global_exists("dia_atual_numero")) {
@@ -165,6 +165,38 @@ timer_dia_frames = 0;
 
 if (!variable_global_exists("pontos")) {
     global.pontos = 0; // Define o valor inicial como 0
+}
+
+show_debug_message("Inicializando mapeamento de sprites dos pedidos...");
+if (!variable_global_exists("global.sprites_pedidos")) {
+    global.sprites_pedidos = {
+        // --- SALGADOS ---
+        "Coxinha": sCoxinha, 
+        "Croassant": sCroassant,
+        "Torta de Frango": sTortadeFrango,
+
+        // --- DONUTS ---
+        "Donut de Ninho": sDonutNinho,
+        "Donut de Chocolate": sDonutChocolate,
+        "Donut de Morango": sDonutMorango,
+
+        // --- BOLOS ---
+        "Bolo Red Velvet": sBoloRedVelvet,
+        "Bolo de Cenoura": sBoloCenoura,
+        "Bolo Chocolate": sBoloChocolate, 
+		"Cookie": sCookie,
+
+        // --- BEBIDAS ---
+        "Cafe": sCafe,
+        "Chocolate Quente": sChocolateQuente,
+        "Agua": sAgua,
+        "Suco de Morango": sSucoMorango,
+        "Suco de Uva": sSucoUva,
+        "Suco de Limão": sSucoLimao,
+        "Suco de Laranja": sSucoLaranja,
+
+    }
+    show_debug_message("Mapeamento de sprites criado com sucesso!");
 }
 
 
