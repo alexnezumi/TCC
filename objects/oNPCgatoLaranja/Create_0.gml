@@ -30,7 +30,7 @@ minha_cadeira_id = noone;
 alvo_x = x;
 alvo_y = y;
 
-tempo_max_espera_segundos = 20;
+tempo_max_espera_segundos = 30;
 timer_entrega = 0;
 
 
