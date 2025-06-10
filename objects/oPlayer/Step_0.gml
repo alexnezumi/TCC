@@ -13,6 +13,13 @@ var tecla_esquerda = keyboard_check(vk_left) || keyboard_check(ord("A"));
 var tecla_cima = keyboard_check(vk_up) || keyboard_check(ord("W"));
 var tecla_baixo = keyboard_check(vk_down) || keyboard_check(ord("S"));
 
+//CORRE MLK
+if (keyboard_check(vk_shift)) {
+    velocidade = velocidade_correndo; // Usa a velocidade de corrida
+} else {
+    velocidade = velocidade_caminhando; // Usa a velocidade de caminhada
+}
+
 // Calcula a velocidade horizontal e vertical
 var velh_atual = (tecla_direita - tecla_esquerda) * velocidade;
 var velv_atual = (tecla_baixo - tecla_cima) * velocidade;

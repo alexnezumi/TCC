@@ -74,7 +74,7 @@ if (!variable_global_exists("receitas")) { // Garante que a lista só seja criad
 
         {
 
-            nome: "Bolo Red Velvet",
+            nome: "bolo_redvelvet",
 
             ingredientes: { bolo_redvelvet: 1 },
 
@@ -84,7 +84,7 @@ if (!variable_global_exists("receitas")) { // Garante que a lista só seja criad
 
         {
 
-            nome: "Bolo de Cenoura",
+            nome: "bolo_cenoura",
 
             ingredientes: { bolo_cenoura: 1 },
 
@@ -94,7 +94,7 @@ if (!variable_global_exists("receitas")) { // Garante que a lista só seja criad
 
         {
 
-            nome: "Bolo Chocolate",
+            nome: "bolo_chocolate",
 
             ingredientes: { bolo_chocolate: 1 }, // Corrigido de bolo_redvelvet para bolo_chocolate
 
@@ -104,7 +104,7 @@ if (!variable_global_exists("receitas")) { // Garante que a lista só seja criad
 
         {
 
-            nome: "Café",
+            nome: "cafe",
 
             ingredientes: { cafe: 1 },
 
@@ -114,7 +114,7 @@ if (!variable_global_exists("receitas")) { // Garante que a lista só seja criad
 
         {
 
-            nome: "Chocolate Quente",
+            nome: "chocolate_quente",
 
             ingredientes: { chocolate_quente: 1 },
 
@@ -124,7 +124,7 @@ if (!variable_global_exists("receitas")) { // Garante que a lista só seja criad
 
         {
 
-            nome: "Água",
+            nome: "agua",
 
             ingredientes: { agua: 1 },
 
@@ -134,7 +134,7 @@ if (!variable_global_exists("receitas")) { // Garante que a lista só seja criad
 		
         {
 
-            nome: "Cookie",
+            nome: "cookie",
 
             ingredientes: { cookie: 1 },
 
@@ -144,7 +144,7 @@ if (!variable_global_exists("receitas")) { // Garante que a lista só seja criad
 
         {
 
-            nome: "Suco de Morango",
+            nome: "suco_morango",
 
             ingredientes: { suco_morango: 1 },
 
@@ -154,7 +154,7 @@ if (!variable_global_exists("receitas")) { // Garante que a lista só seja criad
 
         {
 
-            nome: "Suco de Uva",
+            nome: "suco_uva",
 
             ingredientes: { suco_uva: 1 },
 
@@ -164,7 +164,7 @@ if (!variable_global_exists("receitas")) { // Garante que a lista só seja criad
 
         {
 
-            nome: "Suco de Limão",
+            nome: "suco_limao",
 
             ingredientes: { suco_limao: 1 },
 
@@ -174,7 +174,7 @@ if (!variable_global_exists("receitas")) { // Garante que a lista só seja criad
 
         {
 
-            nome: "Suco de Laranja",
+            nome: "suco_laranja",
 
             ingredientes: { suco_laranja: 1 },
 
@@ -349,9 +349,7 @@ if (!variable_global_exists("global.sprites_pedidos")) {
         // --- SALGADOS ---
 
         "Coxinha": sCoxinha, 
-
         "Croassant": sCroassant,
-
         "Torta de Frango": sTortadeFrango,
 
 
@@ -359,44 +357,44 @@ if (!variable_global_exists("global.sprites_pedidos")) {
         // --- DONUTS ---
 
         "Donut de Ninho": sDonutNinho,
-
         "Donut de Chocolate": sDonutChocolate,
-
         "Donut de Morango": sDonutMorango,
 
 
 
         // --- BOLOS ---
 
-        "Bolo Red Velvet": sBoloRedVelvet,
-
-        "Bolo de Cenoura": sBoloCenoura,
-
-        "Bolo Chocolate": sBoloChocolate, 
-
-		"Cookie": sCookie,
+        "bolo_redvelvet": sBoloRedVelvet,
+        "bolo_cenoura": sBoloCenoura,
+        "bolo_chocolate": sBoloChocolate, 
+		"cookie": sCookie,
 
 
 
         // --- BEBIDAS ---
 
-        "Cafe": sCafe,
+        "cafe": sCafe,
+        "chocolate_quente": sChocolateQuente,
+        "agua": sAgua,
+        "suco_morango": sSucoMorango,
+        "suco_uva": sSucoUva,
+        "suco_limao": sSucoLimao,
+        "suco_laranja": sSucoLaranja,
+		
+		//--- ingredientes---
+		"massa": sMassa,
+		"forma": sForma,
+		"frango": sFrango,
+		"panela": sPanela,
+		"rosquinha": sRosquinha,
+		"calda_ninho": sCaldaNinho,
+		"calda_morango": sCaldaMorango,
+		"calda_chocolate": sCaldaChocolate,
+		
 
-        "Chocolate Quente": sChocolateQuente,
-
-        "Agua": sAgua,
-
-        "Suco de Morango": sSucoMorango,
-
-        "Suco de Uva": sSucoUva,
-
-        "Suco de Limão": sSucoLimao,
-
-        "Suco de Laranja": sSucoLaranja,
 
 
-
-    }
+	}
 
     show_debug_message("Mapeamento de sprites criado com sucesso!");
 

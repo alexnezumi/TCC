@@ -6,9 +6,14 @@ var m_x = device_mouse_x_to_gui(0);
 var m_y = device_mouse_y_to_gui(0);
 distancia_max_entrega = 65;  // Distância máxima em pixels para conseguir entregar. Ajuste como preferir.
 
-velocidade = 5;
+// --- VELOCIDADES DO JOGADOR ---
+velocidade_caminhando = 5;   
+velocidade_correndo = 10;     
 
-// Adicione mais ingredientes conforme necessário
+
+velocidade = velocidade_caminhando; 
+
+
 meus_ingredientes = {
     oleo: 0,
     panela: 0,

@@ -68,7 +68,7 @@ switch (estado) {
             move_towards_point(alvo_x, alvo_y, velocidade_cliente);
         } else {
             x = alvo_x;
-            y = alvo_y;
+            y = alvo_y - 15;
             speed = 0;
             
             // <<< MUDANÇA ADICIONADA AQUI >>>
