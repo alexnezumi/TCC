@@ -50,3 +50,4 @@ function limpar_ingredientes() {
     // Usando a variável correta: inventario_ingredientes (que é um array)
     inventario_ingredientes = [];
 }
+visible = true;

@@ -1,1 +1,1 @@
-nome_ingrediente = "bolo red velvet";
+nome_ingrediente = "bolo_redvelvet";

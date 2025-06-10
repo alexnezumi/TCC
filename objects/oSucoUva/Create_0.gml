@@ -1,1 +1,1 @@
-nome_ingrediente = "suco uva";
+nome_ingrediente = "suco_uva";

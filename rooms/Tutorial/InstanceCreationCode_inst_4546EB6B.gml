@@ -1,0 +1,1 @@
+direcao_cadeira = -1;

@@ -1,6 +1,6 @@
-// oCadeira - Evento Create
+// Em oCadeira - Evento Create
 ocupada = false;
-id_cliente_sentado = noone; // Guarda o ID do cliente que está nesta cadeira ou a caminho dela
-                           // Isso é útil para garantir que a cadeira seja liberada corretamente.
+id_cliente_sentado = noone;
 
-show_debug_message("oCadeira criada (ID: " + string(id) + ") - Estado inicial: Livre");
+// Adicione esta linha: 1 para direita, -1 para esquerda
+direcao_cadeira = 1;

@@ -1,1 +1,1 @@
-nome_ingrediente = "Rosquinha";
+nome_ingrediente = "rosquinha";

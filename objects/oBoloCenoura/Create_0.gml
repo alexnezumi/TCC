@@ -1,1 +1,1 @@
-nome_ingrediente = "bolo de cenoura";
+nome_ingrediente = "bolo_cenoura";

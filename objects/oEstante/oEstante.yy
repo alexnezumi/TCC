@@ -1,20 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"oLixo",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"oEstante",
+  "eventList":[],
   "managed":true,
-  "name":"oLixo",
+  "name":"oEstante",
   "overriddenProperties":[],
   "parent":{
     "name":"Objetos",
     "path":"folders/Objetos.yy",
   },
-  "parentObjectId":{
-    "name":"oColisores",
-    "path":"objects/oColisores/oColisores.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -33,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sLixeira",
-    "path":"sprites/sLixeira/sLixeira.yy",
+    "name":"sEstante",
+    "path":"sprites/sEstante/sEstante.yy",
   },
   "spriteMaskId":null,
   "visible":true,

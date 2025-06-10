@@ -1,6 +1,11 @@
-// oNPCgatoLaranja - Evento Step
+//#################################################################
+// oNPCgatoLaranja - Evento Etapa (Step) - VERSÃO FINAL
+//#################################################################
 
 switch (estado) {
+    //-----------------------------------------------------------------
+    // ESTADO 1: O cliente entra na tela e caminha até um ponto inicial.
+    //-----------------------------------------------------------------
     case "caminhando_reto_inicial":
         if (x > x_alvo_caminhada_reta) {
             x -= velocidade_cliente;
@@ -12,13 +17,16 @@ switch (estado) {
         if (x <= x_alvo_caminhada_reta) {
             x = x_alvo_caminhada_reta;
             estado = "buscando_cadeira";
-            show_debug_message("Cliente " + string(id) + " terminou caminhada reta em x=" + string(x) + ". Buscando cadeira.");
+            show_debug_message("Cliente " + string(id) + " terminou caminhada reta. Buscando cadeira.");
         }
         break;
 
+    //-----------------------------------------------------------------
+    // ESTADO 2: O cliente para e procura por uma cadeira vazia.
+    //-----------------------------------------------------------------
     case "buscando_cadeira":
         var lista_cadeiras_livres = ds_list_create();
-        with (oCadeira) { // << Certifique-se que oCadeira é o nome correto do seu objeto cadeira
+        with (oCadeira) {
             if (!ocupada) {
                 ds_list_add(lista_cadeiras_livres, id);
             }
@@ -34,28 +42,27 @@ switch (estado) {
                 alvo_x = minha_cadeira_id.x;
                 alvo_y = minha_cadeira_id.y;
                 estado = "chegando_cadeira";
-                show_debug_message("Cliente " + string(id) + " escolheu oCadeira (ID: " + string(minha_cadeira_id) + ") em (" + string(alvo_x) + "," + string(alvo_y) + "). Indo até ela.");
-
+                show_debug_message("Cliente " + string(id) + " escolheu oCadeira (ID: " + string(minha_cadeira_id) + "). Indo até ela.");
             } else {
-                 minha_cadeira_id = noone;
-                 show_debug_message("Cliente " + string(id) + ": oCadeira escolhida aleatoriamente não existe mais. Tentando buscar novamente no próximo frame.");
+                minha_cadeira_id = noone;
             }
         } else {
-            show_debug_message("Cliente " + string(id) + " não encontrou nenhuma oCadeira livre. Indo embora.");
-            estado = "saindo_efetivamente";
+            show_debug_message("Cliente " + string(id) + " não encontrou cadeira livre. Indo embora.");
+            estado = "indo_para_saida"; // Se não há cadeiras, vai embora
         }
         ds_list_destroy(lista_cadeiras_livres);
         break;
 
+    //-----------------------------------------------------------------
+    // ESTADO 3: O cliente caminha em direção à cadeira escolhida.
+    //-----------------------------------------------------------------
     case "chegando_cadeira":
         if (!instance_exists(minha_cadeira_id)) {
-            show_debug_message("Cliente " + string(id) + ": oCadeira alvo (ID: " + string(minha_cadeira_id) + ") desapareceu! Buscando nova cadeira.");
+            show_debug_message("Cliente " + string(id) + ": Cadeira alvo desapareceu! Buscando nova cadeira.");
             estado = "buscando_cadeira";
             minha_cadeira_id = noone;
             break;
         }
-
-
 
         if (point_distance(x, y, alvo_x, alvo_y) > velocidade_cliente) {
             move_towards_point(alvo_x, alvo_y, velocidade_cliente);
@@ -64,58 +71,78 @@ switch (estado) {
             y = alvo_y;
             speed = 0;
             
+            // <<< MUDANÇA ADICIONADA AQUI >>>
+            // O cliente ajusta sua direção para a direção definida na cadeira.
+            image_xscale = abs(image_xscale) * minha_cadeira_id.direcao_cadeira;
+            
             estado = "esperando_pedido";
             sprite_index = sprite_pedindo;
             timer_entrega = tempo_max_espera_segundos * game_get_speed(gamespeed_fps);
-            show_debug_message("Cliente " + string(id) + " sentou. Pedido: " + meu_pedido_nome + ". Timer: " + string(tempo_max_espera_segundos) + "s");
+            show_debug_message("Cliente " + string(id) + " sentou. Pedido: " + meu_pedido_nome);
         }
         break;
 
-       case "esperando_pedido":
+    //-----------------------------------------------------------------
+    // ESTADO 4: O cliente está sentado, esperando o pedido. O tempo está correndo!
+    //-----------------------------------------------------------------
+    case "esperando_pedido":
         if (timer_entrega > 0) {
             timer_entrega--;
-        } else { 
+        } else { // Tempo esgotou!
+            var pontos_perdidos = -5;
+            global.pontos = max(0, global.pontos + pontos_perdidos);
+            show_debug_message("Entrega PÉSSIMA! Tempo esgotado. " + string(pontos_perdidos) + " pontos.");
             
-            // --- LÓGICA DE PENALIDADE "PÉSSIMO" ---
-            var pontos_perdidos = -5; // << AJUSTE o valor da penalidade se quiser
-            global.pontos = max(0, global.pontos + pontos_perdidos); // 'max(0, ...)' impede que a pontuação fique negativa
-            show_debug_message("Entrega PÉSSIMA! Tempo esgotado. " + string(pontos_perdidos) + " pontos. Total: " + string(global.pontos));
-            // ----------------------------------------
-            
-            // O resto da lógica para o cliente ficar bravo e ir embora
-            estado = "saindo_bravo";
             sprite_index = sprite_bravo;
-            // ... (liberar cadeira se usar esse sistema, e definir alarme para sair) ...
-            alarm[0] = 2 * game_get_speed(gamespeed_fps);
+            
+            // Libera a cadeira que estava ocupando
+            if (instance_exists(minha_cadeira_id) && minha_cadeira_id.id_cliente_sentado == id) {
+                minha_cadeira_id.ocupada = false;
+                minha_cadeira_id.id_cliente_sentado = noone;
+            }
+            minha_cadeira_id = noone;
+
+            estado = "indo_para_saida";
         }
         break;
 
+    //-----------------------------------------------------------------
+    // ESTADO 5: O cliente recebeu o pedido corretamente. (Este estado é ativado pelo oPlayer)
+    //-----------------------------------------------------------------
     case "recebeu_pedido":
         show_debug_message("Cliente " + string(id) + ": Pedido recebido a tempo! Feliz!");
         sprite_index = sprite_feliz;
-        estado = "saindo_feliz";
+        
+        // Libera a cadeira que estava ocupando
         if (instance_exists(minha_cadeira_id) && minha_cadeira_id.id_cliente_sentado == id) {
             minha_cadeira_id.ocupada = false;
             minha_cadeira_id.id_cliente_sentado = noone;
         }
         minha_cadeira_id = noone;
-        alarm[0] = 2 * game_get_speed(gamespeed_fps);
+        
+        estado = "indo_para_saida";
         break;
 
-    case "saindo_feliz":
-    case "saindo_bravo":
-        // Esperando Alarm[0]
-        break;
-
-    case "saindo_efetivamente":
-        var _ponto_saida_x = -sprite_get_width(sprite_index);
-        var _ponto_saida_y = y;
+    //-----------------------------------------------------------------
+    // ESTADO 6: O cliente (feliz ou bravo) caminha até a porta para sair.
+    //-----------------------------------------------------------------
+    case "indo_para_saida":
+        // << DEFINA AQUI AS COORDENADAS DA SUA PORTA DE SAÍDA >>
+        var _porta_x = 950; 
+        var _porta_y = 65;
         
-        
-
-        if (x > _ponto_saida_x + velocidade_cliente) {
-            move_towards_point(_ponto_saida_x, _ponto_saida_y, velocidade_cliente * 1.5);
+        // Vira o sprite para a direção da porta
+        if (_porta_x > x) {
+            image_xscale = abs(image_xscale) * -1; // Virado para a direita
         } else {
+            image_xscale = abs(image_xscale) * 1; // Virado para a esquerda
+        }
+
+        // Move em direção à porta
+        if (point_distance(x, y, _porta_x, _porta_y) > velocidade_cliente) {
+            move_towards_point(_porta_x, _porta_y, velocidade_cliente);
+        } else {
+            // Quando chega na porta, o cliente é destruído
             instance_destroy();
         }
         break;

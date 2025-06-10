@@ -73,17 +73,22 @@ if (mouse_check_button_pressed(mb_left)) {
     }
     
     // PRIORIDADE 3: TENTAR USAR A COZINHA (COZINHAR OU PEGAR)
-    var _cozinha_clicada = instance_position(_mx, _my, oCozinhaFake); // << Lembre de usar o nome do seu objeto de cozinha
-    if (instance_exists(_cozinha_clicada)) {
-        // Se a cozinha está disponível, tenta cozinhar
-        if (_cozinha_clicada.estado_fogao == "disponivel") {
-            var _resultado_cozinha = _cozinha_clicada.tentar_cozinhar(inventario_ingredientes);
-            if (_resultado_cozinha != false) {
-                inventario_ingredientes = []; // Limpa o inventário se a combinação deu certo
-                if (is_string(_resultado_cozinha) && _resultado_cozinha != "cozinhando") {
-                    item_carregando = _resultado_cozinha;
-                }
-                exit; // Ação concluída.
+	   var _cozinha_clicada = instance_position(_mx, _my, oCozinhaFake);
+		if (instance_exists(_cozinha_clicada)) {
+	    if (_cozinha_clicada.estado_fogao == "disponivel") {
+        
+	        // É AQUI QUE A FUNÇÃO É CHAMADA:
+	        var _resultado_cozinha = _cozinha_clicada.tentar_cozinhar(inventario_ingredientes);
+        
+	        // Se a função retornou sucesso...
+	        if (_resultado_cozinha != false) {
+	            inventario_ingredientes = []; // Limpa o inventário de ingredientes do player
+            
+	            // Se o resultado for um nome de item, pega ele na mão
+	            if (is_string(_resultado_cozinha) && _resultado_cozinha != "cozinhando") {
+	                item_carregando = _resultado_cozinha;
+	            }
+	            exit;
             }
         }
         // Se a cozinha tem um item pronto, tenta pegar
