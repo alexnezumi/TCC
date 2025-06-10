@@ -299,7 +299,7 @@ if (!variable_global_exists("tipos_de_cliente")) {
 
 if (!variable_global_exists("duracao_dia_em_segundos")) {
 
-    global.duracao_dia_em_segundos = 5 * 60; 
+    global.duracao_dia_em_segundos = 1 * 60; 
 
 }
 

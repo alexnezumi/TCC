@@ -1,20 +1,18 @@
 //#################################################################
-// obj_controlador_principal - Evento Draw GUI (VERSÃO REORGANIZADA)
+// obj_controlador_principal - Evento Draw GUI (Alinhado à Esquerda)
 //#################################################################
 
 // --- 1. CONFIGURAÇÕES GERAIS DE DESENHO ---
-// Definimos a fonte e o alinhamento uma única vez para todos os textos.
-draw_set_font(FontTextos);    // << Lembre-se de usar o nome da sua fonte
-draw_set_halign(fa_center);   // Centraliza todos os textos horizontalmente
-draw_set_valign(fa_top);      // Alinha todos pelo topo
-draw_set_color(c_black);      // Define a cor para todos
+draw_set_font(FontTextos);
+draw_set_halign(fa_left);   // Alinhamento à esquerda, já está correto.
+draw_set_valign(fa_top);
+draw_set_color(c_black);
 
 
 // --- 2. DEFINIÇÃO DAS POSIÇÕES ---
-// Definimos variáveis para controlar facilmente a posição de toda a UI.
-var _pos_x = display_get_gui_width() / 2; // O centro da tela
-var _pos_y_inicial = 15;                   // A altura inicial do primeiro texto (15 pixels do topo)
-var _espaco_entre_linhas = 25;             // O espaço vertical entre cada linha de texto
+var _pos_x = 15;            // <<< MUDANÇA PRINCIPAL AQUI: de centro para uma margem fixa.
+var _pos_y_inicial = 15;
+var _espaco_entre_linhas = 25;
 
 
 // --- 3. DESENHAR OS ELEMENTOS NA ORDEM CORRETA ---

@@ -25,13 +25,13 @@ for(var i = 0; i < op_max;i++){
 {
 	instance_create_layer(0,0,layer, oTransicao,{destino: Tutorial});
 }
-	}else if (index == 2){
+	}else if (index == 1){
 		if (!instance_exists(oTransicao2))
 {
 	instance_create_layer(0,0,layer, oTransicao2,{destino: Controles});
 	 
 	}
-	}else if(index == 3){
+	}else if(index == 2){
 		game_end();
 	}
 	}

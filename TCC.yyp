@@ -66,6 +66,7 @@
     {"id":{"name":"oParede","path":"objects/oParede/oParede.yy",},},
     {"id":{"name":"oPause","path":"objects/oPause/oPause.yy",},},
     {"id":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},},
+    {"id":{"name":"oPontos","path":"objects/oPontos/oPontos.yy",},},
     {"id":{"name":"oPorta","path":"objects/oPorta/oPorta.yy",},},
     {"id":{"name":"oRosquinha","path":"objects/oRosquinha/oRosquinha.yy",},},
     {"id":{"name":"oSucoLaranja","path":"objects/oSucoLaranja/oSucoLaranja.yy",},},
