@@ -36,7 +36,7 @@ for(var i = 0; i < op_max;i++){
 	}
 	}
 	}else{
-	draw_set_color(c_black);
+	draw_set_color(c_white);
 	}
 	
 	draw_text(x1,y2,opcoes[i]);

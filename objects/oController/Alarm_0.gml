@@ -1,6 +1,23 @@
-// obj_controlador_principal - Evento Alarm[0]
+//#################################################################
+// obj_controlador_principal - Evento Alarm[0] (COM VERIFICAÇÃO DE TEMPO)
+//#################################################################
 
-// Lógica para verificar se há cadeiras (oCadeira) disponíveis ANTES de criar um novo cliente
+// --- NOVA VERIFICAÇÃO: Checa se falta pouco tempo para o dia acabar ---
+var dez_segundos_em_frames = 10 * game_get_speed(gamespeed_fps);
+
+// Se o tempo restante for menor ou igual a 10 segundos...
+if (timer_dia_frames <= dez_segundos_em_frames) {
+    show_debug_message("Fim do expediente! Menos de 10 segundos restantes. Novos clientes não serão gerados.");
+    
+    // Para a execução do alarme. Nenhum cliente será criado e o alarme não será reativado hoje.
+    exit; 
+}
+
+
+// --- O RESTO DO SEU CÓDIGO DE SPAWN CONTINUA NORMALMENTE ABAIXO ---
+// Se o código chegou até aqui, significa que HÁ mais de 10 segundos restantes.
+
+// Lógica para verificar se há cadeiras (oCadeira) disponíveis
 var _cadeira_disponivel = false;
 if (instance_exists(oCadeira)) {
     with (oCadeira) {
@@ -9,23 +26,14 @@ if (instance_exists(oCadeira)) {
             break;
         }
     }
-} else {
-    show_debug_message("Controlador: Nenhuma instância de oCadeira encontrada. Não é possível criar clientes.");
 }
-// ... (código de verificação de _cadeira_disponivel, como antes) ...
 
+// Se houver uma cadeira disponível, cria um novo cliente
 if (_cadeira_disponivel) {
-    // --- Posição de Spawn FIXA ---
     var spawn_x = 950;
     var spawn_y = 65;
-    // ---------------------------------
-
-    show_debug_message("Controlador: oCadeira disponível. Criando novo oNPCgatoLaranja em (" + string(spawn_x) + "," + string(spawn_y) + ")");
     instance_create_layer(spawn_x, spawn_y, "Instances", oNPCgatoLaranja);
-    
-} else {
-    show_debug_message("Controlador: Nenhuma oCadeira disponível no momento. Cliente não foi criado.");
 }
 
-// Reagenda o alarme
-alarm[0] = random_range(1,1) * game_get_speed(gamespeed_fps);
+// Reagenda o alarme para o próximo cliente (só se o dia ainda não estiver acabando)
+alarm[0] = random_range(5, 10) * game_get_speed(gamespeed_fps);

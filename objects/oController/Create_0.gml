@@ -5,7 +5,6 @@
 
 
 
-
 show_debug_message("Inicializando lista de receitas...");
 
 if (!variable_global_exists("receitas")) { // Garante que a lista só seja criada uma vez
