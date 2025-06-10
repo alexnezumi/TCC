@@ -1,9 +1,4 @@
 
-
-//#################################################################
-// obj_player - Evento Etapa (Step) - VERSÃO COMPLETA
-//#################################################################
-
 // --- 1. VERIFICAÇÃO DE PAUSE ---
 // Se o jogo está pausado, nada abaixo será executado.
 if (global.pause) {
@@ -72,7 +67,6 @@ if (mouse_check_button_pressed(mb_left)) {
             if (point_distance(x, y, _lixeira_clicada.x, _lixeira_clicada.y) <= distancia_max_entrega) {
                 if (item_carregando != noone) { item_carregando = noone; }
                 limpar_ingredientes(); // Função que faz inventario_ingredientes = []
-                // audio_play_sound(snd_lixo, 10, false);
                 exit; // Ação concluída.
             }
         }

@@ -16,8 +16,8 @@ if (instance_exists(oCadeira)) {
 
 if (_cadeira_disponivel) {
     // --- Posição de Spawn FIXA ---
-    var spawn_x = 1385;
-    var spawn_y = 290;
+    var spawn_x = 950;
+    var spawn_y = 65;
     // ---------------------------------
 
     show_debug_message("Controlador: oCadeira disponível. Criando novo oNPCgatoLaranja em (" + string(spawn_x) + "," + string(spawn_y) + ")");
@@ -28,4 +28,4 @@ if (_cadeira_disponivel) {
 }
 
 // Reagenda o alarme
-alarm[0] = random_range(10,10) * game_get_speed(gamespeed_fps);
+alarm[0] = random_range(1,1) * game_get_speed(gamespeed_fps);

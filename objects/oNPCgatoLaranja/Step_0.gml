@@ -35,8 +35,7 @@ switch (estado) {
                 alvo_y = minha_cadeira_id.y;
                 estado = "chegando_cadeira";
                 show_debug_message("Cliente " + string(id) + " escolheu oCadeira (ID: " + string(minha_cadeira_id) + ") em (" + string(alvo_x) + "," + string(alvo_y) + "). Indo até ela.");
-                
-                // Linhas de image_xscale REMOVIDAS daqui
+
             } else {
                  minha_cadeira_id = noone;
                  show_debug_message("Cliente " + string(id) + ": oCadeira escolhida aleatoriamente não existe mais. Tentando buscar novamente no próximo frame.");
@@ -56,7 +55,7 @@ switch (estado) {
             break;
         }
 
-        // Linhas de image_xscale REMOVIDAS daqui
+
 
         if (point_distance(x, y, alvo_x, alvo_y) > velocidade_cliente) {
             move_towards_point(alvo_x, alvo_y, velocidade_cliente);
@@ -75,7 +74,7 @@ switch (estado) {
        case "esperando_pedido":
         if (timer_entrega > 0) {
             timer_entrega--;
-        } else { // Tempo esgotou!
+        } else { 
             
             // --- LÓGICA DE PENALIDADE "PÉSSIMO" ---
             var pontos_perdidos = -5; // << AJUSTE o valor da penalidade se quiser
@@ -112,7 +111,7 @@ switch (estado) {
         var _ponto_saida_x = -sprite_get_width(sprite_index);
         var _ponto_saida_y = y;
         
-        // Linha de image_xscale REMOVIDA daqui
+        
 
         if (x > _ponto_saida_x + velocidade_cliente) {
             move_towards_point(_ponto_saida_x, _ponto_saida_y, velocidade_cliente * 1.5);
