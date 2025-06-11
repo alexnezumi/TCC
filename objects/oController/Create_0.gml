@@ -2,7 +2,12 @@
 
 // Cada struct terá: nome_produto, ingredientes_necessarios (outro struct), tempo_forno
 
+// Em oController - Create Event
+tutorial_cliente_spawned = false;
 
+// --- VARIÁVEIS DO TUTORIAL ---
+global.tutorial_ativo = false; // Uma flag global para outros objetos saberem se o tutorial está acontecendo
+tutorial_passo = 0;           // Controla qual passo do tutorial estamos
 
 
 show_debug_message("Inicializando lista de receitas...");
@@ -17,7 +22,9 @@ if (!variable_global_exists("receitas")) { // Garante que a lista só seja criad
 
             ingredientes: { massa: 1, frango: 1, panela: 1},
 
-            tempo_fogao: 5 * game_get_speed(gamespeed_fps) // 5 segundos
+            tempo_fogao: 5 * game_get_speed(gamespeed_fps), // 5 segundos
+			
+			categoria: "Salgados"
 
         },
 
@@ -27,7 +34,9 @@ if (!variable_global_exists("receitas")) { // Garante que a lista só seja criad
 
             ingredientes: { rosquinha: 1, calda_ninho: 1},
 
-            tempo_fogao: 5 * game_get_speed(gamespeed_fps)
+            tempo_fogao: 5 * game_get_speed(gamespeed_fps),
+			
+			categoria: "Doces"
 
         },
 
@@ -37,7 +46,9 @@ if (!variable_global_exists("receitas")) { // Garante que a lista só seja criad
 
             ingredientes: { rosquinha: 1, calda_chocolate: 1},
 
-            tempo_fogao: 5 * game_get_speed(gamespeed_fps)
+            tempo_fogao: 5 * game_get_speed(gamespeed_fps),
+			
+			categoria: "Doces"
 
         },
 
@@ -47,7 +58,9 @@ if (!variable_global_exists("receitas")) { // Garante que a lista só seja criad
 
             ingredientes: { rosquinha: 1, calda_morango: 1},
 
-            tempo_fogao: 5 * game_get_speed(gamespeed_fps)
+            tempo_fogao: 5 * game_get_speed(gamespeed_fps),
+			
+			categoria: "Doces"
 
         },
 
@@ -57,7 +70,9 @@ if (!variable_global_exists("receitas")) { // Garante que a lista só seja criad
 
             ingredientes: { massa: 1, frango: 1},
 
-            tempo_fogao: 5 * game_get_speed(gamespeed_fps)
+            tempo_fogao: 5 * game_get_speed(gamespeed_fps),
+			
+			categoria: "Salgados"
 
         },
 
@@ -67,7 +82,9 @@ if (!variable_global_exists("receitas")) { // Garante que a lista só seja criad
 
             ingredientes: { massa: 1, forma: 1},
 
-            tempo_fogao: 5 * game_get_speed(gamespeed_fps)
+            tempo_fogao: 5 * game_get_speed(gamespeed_fps),
+			
+			categoria: "Salgados"
 
         },
 
@@ -77,7 +94,9 @@ if (!variable_global_exists("receitas")) { // Garante que a lista só seja criad
 
             ingredientes: { bolo_redvelvet: 1 },
 
-            tempo_fogao: 0 // Preparo instantâneo
+            tempo_fogao: 0, // Preparo instantâneo
+			
+			categoria: "Doces"
 
         },
 
@@ -87,7 +106,9 @@ if (!variable_global_exists("receitas")) { // Garante que a lista só seja criad
 
             ingredientes: { bolo_cenoura: 1 },
 
-            tempo_fogao: 0 // Preparo instantâneo
+            tempo_fogao: 0,// Preparo instantâneo
+			
+			categoria: "Doces"
 
         },
 
@@ -97,7 +118,9 @@ if (!variable_global_exists("receitas")) { // Garante que a lista só seja criad
 
             ingredientes: { bolo_chocolate: 1 }, // Corrigido de bolo_redvelvet para bolo_chocolate
 
-            tempo_fogao: 0 // Preparo instantâneo
+            tempo_fogao: 0, // Preparo instantâneo
+			
+			categoria: "Doces"
 
         },
 
@@ -107,7 +130,9 @@ if (!variable_global_exists("receitas")) { // Garante que a lista só seja criad
 
             ingredientes: { cafe: 1 },
 
-            tempo_fogao: 0 // Preparo instantâneo
+            tempo_fogao: 0, // Preparo instantâneo
+			
+			categoria: "Bebidas"
 
         },
 
@@ -117,7 +142,9 @@ if (!variable_global_exists("receitas")) { // Garante que a lista só seja criad
 
             ingredientes: { chocolate_quente: 1 },
 
-            tempo_fogao: 0 // Preparo instantâneo
+            tempo_fogao: 0, // Preparo instantâneo
+			
+			categoria: "Bebidas"
 
         },
 
@@ -127,7 +154,9 @@ if (!variable_global_exists("receitas")) { // Garante que a lista só seja criad
 
             ingredientes: { agua: 1 },
 
-            tempo_fogao: 0 // Preparo instantâneo
+            tempo_fogao: 0, // Preparo instantâneo
+			
+			categoria: "Bebidas"
 
         },
 		
@@ -137,7 +166,9 @@ if (!variable_global_exists("receitas")) { // Garante que a lista só seja criad
 
             ingredientes: { cookie: 1 },
 
-            tempo_fogao: 0 // Preparo instantâneo
+            tempo_fogao: 0, // Preparo instantâneo
+			
+			categoria: "Doces"
 
         },
 
@@ -147,7 +178,9 @@ if (!variable_global_exists("receitas")) { // Garante que a lista só seja criad
 
             ingredientes: { suco_morango: 1 },
 
-            tempo_fogao: 0 // Preparo instantâneo
+            tempo_fogao: 0, // Preparo instantâneo
+			
+			categoria: "Bebidas"
 
         },
 
@@ -157,7 +190,9 @@ if (!variable_global_exists("receitas")) { // Garante que a lista só seja criad
 
             ingredientes: { suco_uva: 1 },
 
-            tempo_fogao: 0 // Preparo instantâneo
+            tempo_fogao: 0, // Preparo instantâneo
+			
+			categoria: "Bebidas"
 
         },
 
@@ -167,7 +202,9 @@ if (!variable_global_exists("receitas")) { // Garante que a lista só seja criad
 
             ingredientes: { suco_limao: 1 },
 
-            tempo_fogao: 0 // Preparo instantâneo
+            tempo_fogao: 0, // Preparo instantâneo
+			
+			categoria: "Bebidas"
 
         },
 
@@ -177,7 +214,9 @@ if (!variable_global_exists("receitas")) { // Garante que a lista só seja criad
 
             ingredientes: { suco_laranja: 1 },
 
-            tempo_fogao: 0 // Preparo instantâneo
+            tempo_fogao: 0, // Preparo instantâneo
+			
+			categoria: "Bebidas"
 
         }
 
@@ -396,6 +435,21 @@ if (!variable_global_exists("global.sprites_pedidos")) {
 	}
 
     show_debug_message("Mapeamento de sprites criado com sucesso!");
+	
+	if (!variable_global_exists("ingredientes_lista")) {
+    global.ingredientes_lista = [
+        "massa",
+        "frango",
+        "panela",
+        "rosquinha",
+        "calda_ninho",
+        "calda_chocolate",
+        "calda_morango",
+        "forma",
+        // << Adicione aqui os nomes de TODOS os seus outros ingredientes crus >>
+        // Ex: "Bolo Red Velvet Cru", "Massa de Cookie", etc.
+    ];
+}
 
 }
 

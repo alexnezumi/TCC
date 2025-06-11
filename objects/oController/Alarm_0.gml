@@ -2,6 +2,11 @@
 // obj_controlador_principal - Evento Alarm[0] (COM VERIFICAÇÃO DE TEMPO)
 //#################################################################
 
+
+// Em oController - Alarm[0]
+
+if (global.tutorial_ativo) { exit; } // Se o tutorial está ativo, não gera clientes
+
 // --- NOVA VERIFICAÇÃO: Checa se falta pouco tempo para o dia acabar ---
 var dez_segundos_em_frames = 10 * game_get_speed(gamespeed_fps);
 
