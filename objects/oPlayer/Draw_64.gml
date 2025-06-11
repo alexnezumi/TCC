@@ -26,7 +26,7 @@ var _altura_total_painel = _slot_tamanho + 20;
 draw_set_font(Fontmenu); // Define a fonte
 draw_set_halign(fa_left);
 draw_set_valign(fa_bottom);
-draw_set_color(c_white);
+draw_set_color(c_black);
 draw_text(_inv_x, _inv_y - 15, "Inventário"); // Desenha o título acima do painel
 
 // --- 2. DESENHA O PAINEL DE FUNDO ---

@@ -32,6 +32,25 @@ if (variable_instance_exists(self, "timer_dia_frames")) {
     var _segundos_restantes = _total_segundos_restantes mod 60;
 
     var _texto_timer = string_format(_minutos_restantes, 2, 0) + ":" + string_format(_segundos_restantes, 2, 0);
+	
+	// Formata a string dos minutos
+    var _minutos_str;
+    if (_minutos_restantes < 10) {
+        _minutos_str = "0" + string(_minutos_restantes);
+    } else {
+        _minutos_str = string(_minutos_restantes);
+    }
+    
+    // Formata a string dos segundos
+    var _segundos_str;
+    if (_segundos_restantes < 10) {
+        _segundos_str = "0" + string(_segundos_restantes);
+    } else {
+        _segundos_str = string(_segundos_restantes);
+    }
+    
+    // Junta as duas partes para formar o texto final do timer
+    var _texto_timer = _minutos_str + ":" + _segundos_str;
     
     // Desenha na posição inicial + 1x o espaçamento
     draw_text(_pos_x, _pos_y_inicial + _espaco_entre_linhas, "Tempo: " + _texto_timer);

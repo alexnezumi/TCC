@@ -1,19 +1,13 @@
-tamanho = sprite_get_width(sQuadrado);
-colunas = ceil(room_width/tamanho);
-linhas = ceil(room_height/tamanho);
-// variavel para animação 
+// Em obj_Transicao - Evento Create
 
-img = 0;
+// A máquina de estados da transição: "inativo", "fade_out", "fade_in"
+estado = "inativo";
 
-//velocidade da animação 
-img_vel = sprite_get_speed(sQuadrado) / game_get_speed(gamespeed_fps);
+// Nível de transparência (alpha) do retângulo preto. 0 = invisível, 1 = totalmente preto.
+alpha_fade = 0;
 
-img_num = sprite_get_number(sQuadrado) - 1;
+// Velocidade do fade. Um número maior torna a transição mais rápida.
+velocidade_fade = 0.05;
 
-// criando a variavel de mudar de room 
-
-destino = Tutorial;
-
-//controle de entrada e saida
-
-entrando = true;
+// A sala para a qual queremos ir. -1 significa nenhum alvo.
+room_alvo = -1;

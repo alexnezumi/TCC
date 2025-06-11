@@ -16,21 +16,16 @@ for(var i = 0; i < op_max;i++){
 	var string_h = string_height(opcoes[i]);
 	
 	if (point_in_rectangle(m_x,m_y, x1 - string_w /2,y2 - string_h /2, x1 + string_w /2, y2 + string_h/2)){
-	draw_set_color(c_purple);
+	draw_set_color(#8E53D1);
 	index = i;
 	if(mouse_check_button_pressed(mb_left)){
 	
 	if(index == 0){
-	if (!instance_exists(oTransicao))
-{
-	instance_create_layer(0,0,layer, oTransicao,{destino: Tutorial});
-}
+		MudarDeRoomComFade(Tutorial); // Inicia a transição suave
+
 	}else if (index == 1){
-		if (!instance_exists(oTransicao2))
-{
-	instance_create_layer(0,0,layer, oTransicao2,{destino: Controles});
-	 
-	}
+		MudarDeRoomComFade(Controles); // Inicia a transição suave
+		
 	}else if(index == 2){
 		game_end();
 	}

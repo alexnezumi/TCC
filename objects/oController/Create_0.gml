@@ -1,6 +1,5 @@
 // Vamos usar um array de structs para as receitas
 
-// Cada struct terá: nome_produto, ingredientes_necessarios (outro struct), tempo_forno
 
 // Em oController - Create Event
 tutorial_cliente_spawned = false;
@@ -230,7 +229,7 @@ if (!variable_global_exists("receitas")) { // Garante que a lista só seja criad
 
 // ... (código das receitas) ...
 
-alarm[0] = 5 * game_get_speed(gamespeed_fps); // Primeiro cliente em 5 segundos
+alarm[0] = 2 * game_get_speed(gamespeed_fps); // Primeiro cliente em 2 segundos
 
 max_clientes_na_tela = 12; // Limite de clientes
 
@@ -338,7 +337,7 @@ if (!variable_global_exists("tipos_de_cliente")) {
 
 if (!variable_global_exists("duracao_dia_em_segundos")) {
 
-    global.duracao_dia_em_segundos = 5 * 60; 
+    global.duracao_dia_em_segundos = 3 * 60; 
 
 }
 
